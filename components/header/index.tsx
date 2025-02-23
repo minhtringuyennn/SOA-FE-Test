@@ -7,6 +7,7 @@ import { useMotionValueEvent, useScroll } from 'framer-motion';
 import { MenuIcon, X } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
+import { Icons } from '../icons';
 import { useTranslations } from 'next-intl';
 
 export default function Header() {
@@ -34,6 +35,7 @@ export default function Header() {
             'flex h-14 w-full items-center justify-between px-4 py-2 sm:px-6 lg:px-8'
           }
         >
+          {/* LOGO SAMPLE */}
           <Link
             href="/"
             aria-label={siteConfig.name}
@@ -43,7 +45,8 @@ export default function Header() {
             LOGO SAMPLE
           </Link>
 
-          <div className="hidden gap-x-8 md:flex">
+          {/* Desktop Navigation */}
+          <div className="md:font-sm hidden gap-x-8 md:flex">
             {t
               .raw('head_menu')
               .slice(0, 4)
@@ -58,19 +61,21 @@ export default function Header() {
               ))}
           </div>
 
+          {/* Utlity Icons */}
           <div className="hidden items-center gap-x-6 md:flex">
-            <Image alt="Mountain" src="vectors/Mountains.svg" width={28} height={28} />
-            <Image alt="Fish" src="vectors/Fishing.svg" width={28} height={28} />
+            <Image alt="Mountain" src="/Mountains.svg" width={28} height={28} />
+            <Image alt="Fish" src="/Fishing.svg" width={28} height={28} />
             <Image
               alt="Crosshair"
-              src="vectors/Crosshair.svg"
+              src="/Crosshair.svg"
               width={28}
               height={28}
             />
-            <Image alt="Book" src="vectors/Book.svg" width={64} height={40} />
+            <Image alt="Book" src="/Book.svg" width={64} height={40} />
             <LangSwitcher />
           </div>
 
+          {/* Mobile Menu Button */}
           <button
             aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}
             className="rounded-lg p-2 text-white transition-colors hover:bg-white/10 md:hidden"
@@ -87,6 +92,7 @@ export default function Header() {
         {isMenuOpen && (
           <div className="fixed inset-0 top-14 z-50 bg-neutral-900/95 backdrop-blur-sm transition-all md:hidden">
             <div className="container mx-auto bg-neutral-900 p-4">
+              {/* Navigation Links */}
               <div className="mb-8 space-y-4">
                 <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-neutral-400">
                   Navigation
@@ -106,6 +112,7 @@ export default function Header() {
                   ))}
               </div>
 
+              {/* Quick Actions */}
               <div className="mb-8">
                 <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-neutral-400">
                   Quick Actions
@@ -114,7 +121,7 @@ export default function Header() {
                   <div className="flex flex-col items-center gap-2">
                     <Image
                       alt="Mountain"
-                      src="vectors/Mountains.svg"
+                      src="/Mountains.svg"
                       width={28}
                       height={28}
                     />
@@ -123,7 +130,7 @@ export default function Header() {
                   <div className="flex flex-col items-center gap-2">
                     <Image
                       alt="Fish"
-                      src="vectors/Fishing.svg"
+                      src="/Fishing.svg"
                       width={28}
                       height={28}
                     />
@@ -132,19 +139,20 @@ export default function Header() {
                   <div className="flex flex-col items-center gap-2">
                     <Image
                       alt="Crosshair"
-                      src="vectors/Crosshair.svg"
+                      src="/Crosshair.svg"
                       width={28}
                       height={28}
                     />
                     <span className="text-xs text-white/60">Target</span>
                   </div>
                   <div className="flex flex-col items-center gap-2">
-                    <Image alt="Book" src="vectors/Book.svg" width={40} height={28} />
+                    <Image alt="Book" src="/Book.svg" width={40} height={28} />
                     <span className="text-xs text-white/60">Book</span>
                   </div>
                 </div>
               </div>
 
+              {/* Settings */}
               <div>
                 <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-neutral-400">
                   Settings

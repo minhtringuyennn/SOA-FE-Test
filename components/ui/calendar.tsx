@@ -69,7 +69,7 @@ function Calendar({
           day_outside: cn(
             'day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground',
             'flex h-full w-full items-center justify-center p-0 text-sm',
-            'border border-solid border-[#DFDFDF] bg-[#F5F5F5] rounded-md',
+            'border border-solid border-[#DFDFDF] bg-[#F5F5F5] rounded-[12px]',
           ),
           day_disabled: 'text-muted-foreground opacity-50',
           day_range_middle:

@@ -1,5 +1,6 @@
 export const runtime = 'edge';
 
+import { TailwindIndicator } from '@/components/tailwind-indicator';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import '@/styles/globals.css';
@@ -64,6 +65,7 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
+          <TailwindIndicator />
         </NextIntlClientProvider>
       </body>
     </html>

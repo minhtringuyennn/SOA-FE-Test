@@ -11,7 +11,13 @@ export default function SecondBloc() {
 
   return (
     <>
-      <div className="w-full bg-[#FFF6F4] px-4 md:px-8 ">
+      <div className="relative h-full w-full bg-[#FFF6F4] px-4 md:px-8 ">
+        <Image
+          src="/images/zoomable-map-bg.png"
+          alt={t('bloc_2.title')}
+          fill
+          className="-z-1 object-fill opacity-[0.03]"
+        />
         <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-8 py-8 md:py-14">
           <div className="flex w-full items-center gap-4">
             <div className="h-[2px] w-full bg-neutral-300" />
@@ -21,7 +27,7 @@ export default function SecondBloc() {
             <div className="h-[2px] w-full bg-neutral-300" />
           </div>
           <div className="flex w-full flex-wrap justify-center gap-5">
-            <Button variant="outline">
+            <Button variant="outline" className="px-4 py-2">
               <Image
                 src="/Mountains_vector.svg"
                 alt={t('bloc_2.cases.0')}
@@ -30,7 +36,7 @@ export default function SecondBloc() {
               />
               {t('bloc_2.cases.0')}
             </Button>
-            <Button variant="outline">
+            <Button variant="outline" className="px-4 py-2">
               <Image
                 src="/Fishing_vector.svg"
                 alt={t('bloc_2.cases.0')}
@@ -39,7 +45,7 @@ export default function SecondBloc() {
               />
               {t('bloc_2.cases.1')}
             </Button>
-            <Button variant="outline">
+            <Button variant="outline" className="px-4 py-2">
               <Image
                 src="/Crosshair_vector.svg"
                 alt={t('bloc_2.cases.0')}
@@ -52,7 +58,7 @@ export default function SecondBloc() {
           <ZoomableMap />
         </div>
       </div>
-      <div className="mx-auto flex w-full max-w-5xl flex-col items-center justify-center gap-12 px-4 py-12 md:px-8">
+      <div className="mx-auto flex w-full max-w-5xl flex-col items-center justify-center gap-12 px-4 py-12 md:px-4">
         <div className="flex w-full items-center gap-4 ">
           <div className="h-[2px] w-full bg-neutral-300" />
           <h2 className="w-full text-center text-3xl font-bold tracking-tight text-red-500">
